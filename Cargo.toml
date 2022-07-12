@@ -1,0 +1,20 @@
+[package]
+name = "hello-wasm"
+version = "0.1.0"
+authors = ["Your Name <you@example.com>"]
+description = "A sample project with wasm-pack"
+license = "MIT/Apache-2.0"
+repository = "https://github.com/yourgithubusername/hello-wasm"
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = "0.2.74"
+semaphore = { path = "/Users/psippl/scm/worldcoin/libsemaphore-rs"}
+# semaphore = { git = "https://github.com/worldcoin/semaphore-rs", rev = "b828804" }
+getrandom = { version="0.2.7", features=["js"] }
+console_error_panic_hook = "0.1.7"
+wasm-bindgen-rayon = { version = "1.0", features = ["no-bundler"] }
+js-sys = "0.3.58"
